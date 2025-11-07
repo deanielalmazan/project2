@@ -156,8 +156,7 @@ body {
     background: linear-gradient(135deg,
             #008C45 0%,
             #F4F5F0 50%,
-            #CD212A 100%
-        );
+            #CD212A 100%);
     color: #333;
     border: none;
     position: relative;
@@ -359,17 +358,17 @@ body {
 
 .visit {
     background: linear-gradient(135deg,
-        var(--marble-white) 0%,
-        #e8f4f8 50%,
-        var(--marble-white) 100%);
+            var(--marble-white) 0%,
+            #f8f9fa,
+            var(--marble-white) 100%);
     position: relative;
 }
 
 .visit-card {
     background: linear-gradient(135deg,
-        rgba(139, 69, 19, 0.05) 0%,
-        rgba(212, 175, 55, 0.1) 50%,
-        rgba(30, 144, 255, 0.05) 100%);
+            rgba(139, 69, 19, 0.05) 0%,
+            rgba(212, 175, 55, 0.1) 50%,
+            rgba(30, 144, 255, 0.05) 100%);
     border: 1px solid rgba(139, 69, 19, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 1.5rem;
@@ -384,6 +383,36 @@ body {
     color: #000;
     line-height: 1.7;
     font-size: 1rem;
+}
+
+.end-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.end-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 100%);
+}
+
+.end-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(245, 245, 245, 1) 0%,
+            rgba(245, 245, 245, 0.6) 40%,
+            rgba(245, 245, 245, 0.2) 70%,
+            rgba(245, 245, 245, 0) 100%);
 }
 
 .footer-custom {
